@@ -12,7 +12,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class PropriedadesElemento implements Serializable{
+public class PropriedadesFisicas implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
@@ -37,6 +37,23 @@ public class PropriedadesElemento implements Serializable{
 	private String grupo;
 	
 	private String quadra;
+	
+	private String entalpiaFusao;
+	
+	private String volumeMolar;
+	
+	private String pressaoVapor;
+	
+	
+	
+	public boolean isInclusao() {
+		return getId() == null ? true : false;
+	}
+	
+	public boolean isEdicao() {
+		return !isInclusao();
+	}
+	
 
 	public String getNumeroAtomico() {
 		return numeroAtomico;
@@ -108,6 +125,38 @@ public class PropriedadesElemento implements Serializable{
 
 	public void setQuadra(String quadra) {
 		this.quadra = quadra;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getEntalpiaFusao() {
+		return entalpiaFusao;
+	}
+
+	public void setEntalpiaFusao(String entalpiaFusao) {
+		this.entalpiaFusao = entalpiaFusao;
+	}
+
+	public String getVolumeMolar() {
+		return volumeMolar;
+	}
+
+	public void setVolumeMolar(String volumeMolar) {
+		this.volumeMolar = volumeMolar;
+	}
+
+	public String getPressaoVapor() {
+		return pressaoVapor;
+	}
+
+	public void setPressaoVapor(String pressaoVapor) {
+		this.pressaoVapor = pressaoVapor;
 	}
 	
 	

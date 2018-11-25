@@ -1,6 +1,7 @@
 package br.com.tcc.crud.model;
 
 
+import java.awt.TextArea;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
@@ -13,7 +14,6 @@ public class Elemento implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -21,29 +21,53 @@ public class Elemento implements Serializable{
 	
 	private String nome;
 	
-	private String cpf;
 	
-	private String rg;
+	private TextArea links;
 	
-	private String rua;
+	private String nomeLatim;
 	
-	private Short numero;
+	private String nomeIngles;
 	
-	private String bairro;
+	private String CAS;
 	
-	private String cep;
+	private Short camadasEletronicas;
 	
-	private String complemento;
+	private String simbolo;
 	
-	private String telefone;
+	private String origemNome;
 	
-	private String celular;
+	private String serieQuimica;
 	
-	private String email;
 	
-//	@ManyToOne
-//	@JoinColumn(nullable = false)
-//	private Cidade cidade;
+	private Descoberta descoberta;
+	
+	private PropriedadesAtomicas propriedadesAtomicas;
+	
+	private PropriedadesEletromagneticas propriedadesEletromagneticas;
+	
+	private PropriedadesDiversas propriedadesDiversas;
+	
+	private PropriedadesFisicas propriedadesFisicas;
+	
+	private CelulaCristalina celulaCristalina;
+	
+	
+	public boolean isInclusao() {
+		return getId() == null ? true : false;
+	}
+	
+	public boolean isEdicao() {
+		return !isInclusao();
+	}
+	
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public String getNome() {
 		return nome;
@@ -53,85 +77,125 @@ public class Elemento implements Serializable{
 		this.nome = nome;
 	}
 
-	public String getCpf() {
-		return cpf;
+	public String getNomeLatim() {
+		return nomeLatim;
 	}
 
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+	public void setNomeLatim(String nomeLatim) {
+		this.nomeLatim = nomeLatim;
 	}
 
-	public String getRg() {
-		return rg;
+	public String getNomeIngles() {
+		return nomeIngles;
 	}
 
-	public void setRg(String rg) {
-		this.rg = rg;
+	public void setNomeIngles(String nomeIngles) {
+		this.nomeIngles = nomeIngles;
 	}
 
-	public String getRua() {
-		return rua;
+	public String getCAS() {
+		return CAS;
 	}
 
-	public void setRua(String rua) {
-		this.rua = rua;
+	public void setCAS(String cAS) {
+		CAS = cAS;
 	}
 
-	public Short getNumero() {
-		return numero;
+	public Short getCamadasEletronicas() {
+		return camadasEletronicas;
 	}
 
-	public void setNumero(Short numero) {
-		this.numero = numero;
+	public void setCamadasEletronicas(Short camadasEletronicas) {
+		this.camadasEletronicas = camadasEletronicas;
 	}
 
-	public String getBairro() {
-		return bairro;
+	public String getSimbolo() {
+		return simbolo;
 	}
 
-	public void setBairro(String bairro) {
-		this.bairro = bairro;
+	public void setSimbolo(String simbolo) {
+		this.simbolo = simbolo;
 	}
 
-	public String getCep() {
-		return cep;
+	public String getOrigemNome() {
+		return origemNome;
 	}
 
-	public void setCep(String cep) {
-		this.cep = cep;
+	public void setOrigemNome(String origemNome) {
+		this.origemNome = origemNome;
 	}
 
-	public String getComplemento() {
-		return complemento;
+	public String getSerieQuimica() {
+		return serieQuimica;
 	}
 
-	public void setComplemento(String complemento) {
-		this.complemento = complemento;
+	public void setSerieQuimica(String serieQuimica) {
+		this.serieQuimica = serieQuimica;
 	}
 
-	public String getTelefone() {
-		return telefone;
+	public Descoberta getDescoberta() {
+		return descoberta;
 	}
 
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
+	public void setDescoberta(Descoberta descoberta) {
+		this.descoberta = descoberta;
 	}
 
-	public String getCelular() {
-		return celular;
+	public PropriedadesAtomicas getPropriedadesAtomicas() {
+		return propriedadesAtomicas;
 	}
 
-	public void setCelular(String celular) {
-		this.celular = celular;
+	public void setPropriedadesAtomicas(PropriedadesAtomicas propriedadesAtomicas) {
+		this.propriedadesAtomicas = propriedadesAtomicas;
 	}
 
-	public String getEmail() {
-		return email;
+	public PropriedadesEletromagneticas getPropriedadesEletromagneticas() {
+		return propriedadesEletromagneticas;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setPropriedadesEletromagneticas(PropriedadesEletromagneticas propriedadesEletromagneticas) {
+		this.propriedadesEletromagneticas = propriedadesEletromagneticas;
 	}
+
+	public PropriedadesDiversas getPropriedadesDiversas() {
+		return propriedadesDiversas;
+	}
+
+	public void setPropriedadesDiversas(PropriedadesDiversas propriedadesDiversas) {
+		this.propriedadesDiversas = propriedadesDiversas;
+	}
+
+	public PropriedadesFisicas getPropriedadesFisicas() {
+		return propriedadesFisicas;
+	}
+
+	public void setPropriedadesFisicas(PropriedadesFisicas propriedadesFisicas) {
+		this.propriedadesFisicas = propriedadesFisicas;
+	}
+
+	public CelulaCristalina getCelulaCristalina() {
+		return celulaCristalina;
+	}
+
+	public void setCelulaCristalina(CelulaCristalina celulaCristalina) {
+		this.celulaCristalina = celulaCristalina;
+	}
+
+	public TextArea getLinks() {
+		return links;
+	}
+
+	public void setLinks(TextArea links) {
+		this.links = links;
+	}
+	
+	
+	
+//	@ManyToOne
+//	@JoinColumn(nullable = false)
+//	private Cidade cidade;
+
+	
 
 //	public Cidade getCidade() {
 //		return cidade;

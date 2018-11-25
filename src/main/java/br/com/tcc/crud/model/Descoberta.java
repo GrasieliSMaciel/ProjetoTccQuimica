@@ -25,6 +25,24 @@ public class Descoberta  implements Serializable{
 	
 	private String descricao;
 
+	
+	public boolean isInclusao() {
+		return getId() == null ? true : false;
+	}
+	
+	public boolean isEdicao() {
+		return !isInclusao();
+	}
+	
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	public Date getData() {
 		return data;
 	}

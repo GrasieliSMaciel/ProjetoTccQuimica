@@ -22,6 +22,8 @@ public class PropriedadesEletromagneticas implements Serializable{
 	
 	private BigDecimal condutividadeEletrica;
 	
+	private BigDecimal condutividadeTermica;
+	
 	private String tipoEletrico;
 	
 	private String tipoMagnetico;
@@ -35,6 +37,17 @@ public class PropriedadesEletromagneticas implements Serializable{
 	private BigDecimal resistividade;
 	
 	private String pontoSuperconducao;
+	
+	
+	public boolean isInclusao() {
+		return getId() == null ? true : false;
+	}
+	
+	public boolean isEdicao() {
+		return !isInclusao();
+	}
+	
+	
 
 	public BigDecimal getPropriedades() {
 		return propriedades;
@@ -106,6 +119,22 @@ public class PropriedadesEletromagneticas implements Serializable{
 
 	public void setPontoSuperconducao(String pontoSuperconducao) {
 		this.pontoSuperconducao = pontoSuperconducao;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public BigDecimal getCondutividadeTermica() {
+		return condutividadeTermica;
+	}
+
+	public void setCondutividadeTermica(BigDecimal condutividadeTermica) {
+		this.condutividadeTermica = condutividadeTermica;
 	}
 	
 	

@@ -8,7 +8,7 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
 import br.com.tcc.crud.exception.NegocioException;
-import br.com.tcc.crud.model.Tarefa;
+import br.com.tcc.crud.model.PropriedadesAtomicas;
 
 
 public class PropriedadesAtomicasDAO implements Serializable {
@@ -18,27 +18,27 @@ public class PropriedadesAtomicasDAO implements Serializable {
 	@Inject
 	private EntityManager manager;
 
-	public Tarefa salvar(Tarefa tarefa) {
-		return manager.merge(tarefa);
+	public PropriedadesAtomicas salvar(PropriedadesAtomicas propriedadesAtomicas) {
+		return manager.merge(propriedadesAtomicas);
 	}
 	
-	public void excluir(Tarefa tarefa) {
+	public void excluir(PropriedadesAtomicas propriedadesAtomicas) {
 		try {
-			tarefa = porId(tarefa.getId());
-			manager.remove(tarefa);
+			propriedadesAtomicas = porId(propriedadesAtomicas.getId());
+			manager.remove(propriedadesAtomicas);
 			manager.flush();
 			
 		} catch (Exception e) {			
-			throw new NegocioException("Tarefa não pode ser excluída");
+			throw new NegocioException("Esta propriedade atomica n�o pode ser excluida");
 		}
 	}
 
-	public Tarefa porId(Long id) {		
-		return manager.find(Tarefa.class, id);
+	public PropriedadesAtomicas porId(Long id) {		
+		return manager.find(PropriedadesAtomicas.class, id);
 	}
 	
-	public List<Tarefa> listAll() {
-		return manager.createNativeQuery("SELECT * FROM Tarefa", Tarefa.class).getResultList();
+	public List<PropriedadesAtomicas> listAll() {
+		return manager.createNativeQuery("SELECT * FROM PropriedadesAtomicas", PropriedadesAtomicas.class).getResultList();
 	}
 
 

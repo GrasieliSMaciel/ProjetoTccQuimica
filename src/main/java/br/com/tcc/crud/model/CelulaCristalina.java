@@ -1,6 +1,7 @@
 package br.com.tcc.crud.model;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,131 +21,84 @@ public class CelulaCristalina  implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(length = 50, nullable = false)
-	private String nome;
-	
-	@Column(length = 50, nullable = false)
-	private String cpf;
-	
-	@Column(length = 45, nullable = false)
-	private String rg;
-	
-	@Column(length = 50, nullable = false)
-	private String rua;
-	
-	@Column(nullable = false)
-	private Short numero;
-	
-	@Column(length = 50, nullable = false)
-	private String bairro;
-	
-	@Column(length = 52, nullable = false)
-	private String cep;
 	
 	@Column(length = 50)
-	private String complemento;
+	private String estruturaGrade;
 	
-	@Column(length = 50, nullable = false)
-	private String telefone;
+	@Column(length = 13)
+	private String parametrosGradeA;
 	
-	@Column(length = 50, nullable = false)
-	private String celular;
+	@Column(length = 13)
+	private String parametrosGradeC;
 	
-	@Column(length = 50, nullable = false)
-	private String email;
+	@Column(length = 50)
+	private BigDecimal atitudeCA;
+	
+	private BigDecimal temperaturaDebye;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getEstruturaGrade() {
+		return estruturaGrade;
+	}
+
+	public void setEstruturaGrade(String estruturaGrade) {
+		this.estruturaGrade = estruturaGrade;
+	}
+
+	public String getParametrosGradeA() {
+		return parametrosGradeA;
+	}
+
+	public void setParametrosGradeA(String parametrosGradeA) {
+		this.parametrosGradeA = parametrosGradeA;
+	}
+
+	public String getParametrosGradeC() {
+		return parametrosGradeC;
+	}
+
+	public void setParametrosGradeC(String parametrosGradeC) {
+		this.parametrosGradeC = parametrosGradeC;
+	}
+
+	public BigDecimal getAtitudeCA() {
+		return atitudeCA;
+	}
+
+	public void setAtitudeCA(BigDecimal atitudeCA) {
+		this.atitudeCA = atitudeCA;
+	}
+
+	public BigDecimal getTemperaturaDebye() {
+		return temperaturaDebye;
+	}
+
+	public void setTemperaturaDebye(BigDecimal temperaturaDebye) {
+		this.temperaturaDebye = temperaturaDebye;
+	}
+	
+
+	
+	
+	public boolean isInclusao() {
+		return getId() == null ? true : false;
+	}
+	
+	public boolean isEdicao() {
+		return !isInclusao();
+	}
+	
 	
 //	@ManyToOne
 //	@JoinColumn(nullable = false)
 //	private Cidade cidade;
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getCpf() {
-		return cpf;
-	}
-
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-
-	public String getRg() {
-		return rg;
-	}
-
-	public void setRg(String rg) {
-		this.rg = rg;
-	}
-
-	public String getRua() {
-		return rua;
-	}
-
-	public void setRua(String rua) {
-		this.rua = rua;
-	}
-
-	public Short getNumero() {
-		return numero;
-	}
-
-	public void setNumero(Short numero) {
-		this.numero = numero;
-	}
-
-	public String getBairro() {
-		return bairro;
-	}
-
-	public void setBairro(String bairro) {
-		this.bairro = bairro;
-	}
-
-	public String getCep() {
-		return cep;
-	}
-
-	public void setCep(String cep) {
-		this.cep = cep;
-	}
-
-	public String getComplemento() {
-		return complemento;
-	}
-
-	public void setComplemento(String complemento) {
-		this.complemento = complemento;
-	}
-
-	public String getTelefone() {
-		return telefone;
-	}
-
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
-	}
-
-	public String getCelular() {
-		return celular;
-	}
-
-	public void setCelular(String celular) {
-		this.celular = celular;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
 //	public Cidade getCidade() {
 //		return cidade;
 //	}

@@ -31,6 +31,15 @@ public class Usuario implements Serializable{
 	
 	private Boolean ativo;
 	
+	
+	public boolean isInclusao() {
+		return getId() == null ? true : false;
+	}
+	
+	public boolean isEdicao() {
+		return !isInclusao();
+	}
+	
 //	@OneToOne
 //	@JoinColumn(nullable = false)
 //	private Pessoa pessoa;

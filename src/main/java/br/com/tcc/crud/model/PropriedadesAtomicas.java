@@ -17,32 +17,50 @@ public class PropriedadesAtomicas implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-//	@Column(length = 255)
+	@Column(length = 255)
 	private String propriedades;
 	
-//	@Column(length = 255)
+	@Column(length = 255)
 	private String descricao;
 	
-//	@Column(length = 100)
+	@Column(length = 100)
 	private String configuracaoEletronica;
 	
-//	@Column(length = 50)
+	@Column(length = 50)
 	private String estadosOxidacao;
 	
-//	@Column(length = 50)
+	@Column(length = 50)
 	private String cargaIons;
 	
-//	@Column(length = 50)
+	@Column(length = 50)
 	private String eletronsCamada;
 	
-//	@Column(length = 20)
+	@Column(length = 20)
 	private BigDecimal raioAtomico;
 	
-//	@Column(length = 20)
+	@Column(length = 20)
 	private BigDecimal raioCovalente;
 	
-//	@Column(length = 20)
+	@Column(length = 20)
 	private BigDecimal raioVanDerWaals;
+
+	
+	public boolean isInclusao() {
+		return getId() == null ? true : false;
+	}
+	
+	public boolean isEdicao() {
+		return !isInclusao();
+	}
+	
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public String getPropriedades() {
 		return propriedades;
