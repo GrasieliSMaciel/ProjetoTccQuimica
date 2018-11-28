@@ -11,6 +11,7 @@
     <ui:define name="body">
         <f:metadata>
         	<f:viewParam name="id" value="#{cadastroElementoMB.idElemento}" converter="javax.faces.Long"/>
+        	<f:viewParam name="id" value="#{cadastroElementoMB.idDescoberta}" converter="javax.faces.Long"/>
         	<f:event listener="#{cadastroElementoMB.inicializar()}" type="preRenderView"></f:event>
         </f:metadata>
 
@@ -72,7 +73,11 @@
                      		<p:outputLabel value="Origem do Nome" for="nomeOrigem"/>
                     		<p:inputText id="nomeOrigem" value="#{cadastroElementoMB.elemento.origemNome}"/>                   		                    		
                     		
+                     		<p:outputLabel value="Descobridor" for="descobridor"/>
+                    		<p:inputText id="descobridor" value="#{cadastroElementoMB.descoberta.descobridor}"/> 
                     		
+                     		<p:outputLabel value="Descrição" for="descricao"/>
+                    		<p:inputText id="descricao" value="#{cadastroElementoMB.descoberta.descricao}"/>                    		
                     		
                     	</p:panelGrid>
                     

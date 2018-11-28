@@ -60,7 +60,7 @@ public class CadastroElementoMB implements Serializable{
 	
 	public void inicializar() {
 		
-		System.out.println("Cadastro elemento init");
+		System.out.println("Cadastro elemento init da classe elemento");
 		
 		if (idElemento != null) {
 			elemento = elementoService.porId(idElemento);
@@ -85,21 +85,37 @@ public class CadastroElementoMB implements Serializable{
 //				celulaCristalina = celulaCristalinaService.porId(idCelulaCristalina);
 //			}
 //			
-//			if(idDescoberta != null) {
-//				descoberta = descobertaService.porId(idDescoberta);
-//			}
+			if(idDescoberta != null) {
+				descoberta = descobertaService.porId(idDescoberta);
+			}
 		}
 	}
 	
 	
 	public String salvar() {
 		
+		System.out.println("Descoberta: " + descoberta);
+		
+		System.out.println("Descoberta descobrifor: " + descoberta.getDescobridor());
+		
+//		descoberta.setDescricao("descrição forçada");
+		
+//		descobertaService.salvar(descoberta);	
+		
+		elemento.setDescoberta(descoberta);
+		
+		System.out.println("Elemento: " + elemento);
 		elementoService.salvar(elemento);
+		
+		
 		return "lista-elementos.xhtml?faces-redirect=true";
 	}
 	
 	public String excluir() {
+		
 		elementoService.excluir(elemento);
+//		descobertaService.excluir(descoberta);
+		
 		return "lista-elementos.xhtml?faces-redirect=true";
 	}
 

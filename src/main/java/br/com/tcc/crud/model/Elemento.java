@@ -8,6 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 
 @Entity
 public class Elemento implements Serializable{
@@ -22,13 +26,13 @@ public class Elemento implements Serializable{
 	private String nome;
 	
 	
-	private TextArea links;
+	private String links;
 	
 	private String nomeLatim;
 	
 	private String nomeIngles;
 	
-	private String CAS;
+	private String cas;
 	
 	private Short camadasEletronicas;
 	
@@ -38,17 +42,23 @@ public class Elemento implements Serializable{
 	
 	private String serieQuimica;
 	
-	
+	@OneToOne
+	@Cascade(CascadeType.ALL)
 	private Descoberta descoberta;
 	
+	@OneToOne
 	private PropriedadesAtomicas propriedadesAtomicas;
 	
+	@OneToOne
 	private PropriedadesEletromagneticas propriedadesEletromagneticas;
 	
+	@OneToOne
 	private PropriedadesDiversas propriedadesDiversas;
 	
+	@OneToOne
 	private PropriedadesFisicas propriedadesFisicas;
 	
+	@OneToOne
 	private CelulaCristalina celulaCristalina;
 	
 	
@@ -93,12 +103,13 @@ public class Elemento implements Serializable{
 		this.nomeIngles = nomeIngles;
 	}
 
-	public String getCAS() {
-		return CAS;
+		
+	public String getCas() {
+		return cas;
 	}
 
-	public void setCAS(String cAS) {
-		CAS = cAS;
+	public void setCas(String cas) {
+		this.cas = cas;
 	}
 
 	public Short getCamadasEletronicas() {
@@ -181,13 +192,15 @@ public class Elemento implements Serializable{
 		this.celulaCristalina = celulaCristalina;
 	}
 
-	public TextArea getLinks() {
+	public String getLinks() {
 		return links;
 	}
 
-	public void setLinks(TextArea links) {
+	public void setLinks(String links) {
 		this.links = links;
 	}
+
+
 	
 	
 	
