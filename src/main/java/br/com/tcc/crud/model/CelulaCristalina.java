@@ -22,16 +22,12 @@ public class CelulaCristalina  implements Serializable{
 	private Long id;
 	
 	
-	@Column(length = 50)
 	private String estruturaGrade;
 	
-	@Column(length = 13)
 	private String parametrosGradeA;
 	
-	@Column(length = 13)
 	private String parametrosGradeC;
 	
-	@Column(length = 50)
 	private BigDecimal atitudeCA;
 	
 	private BigDecimal temperaturaDebye;
@@ -83,19 +79,10 @@ public class CelulaCristalina  implements Serializable{
 	public void setTemperaturaDebye(BigDecimal temperaturaDebye) {
 		this.temperaturaDebye = temperaturaDebye;
 	}
-	
+
 
 	
-	
-	public boolean isInclusao() {
-		return getId() == null ? true : false;
-	}
-	
-	public boolean isEdicao() {
-		return !isInclusao();
-	}
-	
-	
+
 //	@ManyToOne
 //	@JoinColumn(nullable = false)
 //	private Cidade cidade;

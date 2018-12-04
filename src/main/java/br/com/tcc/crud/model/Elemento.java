@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 
 import org.hibernate.annotations.Cascade;
@@ -42,23 +43,33 @@ public class Elemento implements Serializable{
 	
 	private String serieQuimica;
 	
+	
+//    //Relacionamento implementado
+//    @ManyToMany(mappedBy="notebooks")
+//    private Substancia substancia;
+	
 	@OneToOne
 	@Cascade(CascadeType.ALL)
 	private Descoberta descoberta;
 	
 	@OneToOne
+	@Cascade(CascadeType.ALL)
 	private PropriedadesAtomicas propriedadesAtomicas;
 	
 	@OneToOne
+	@Cascade(CascadeType.ALL)
 	private PropriedadesEletromagneticas propriedadesEletromagneticas;
 	
 	@OneToOne
+	@Cascade(CascadeType.ALL)
 	private PropriedadesDiversas propriedadesDiversas;
 	
 	@OneToOne
+	@Cascade(CascadeType.ALL)
 	private PropriedadesFisicas propriedadesFisicas;
 	
 	@OneToOne
+	@Cascade(CascadeType.ALL)
 	private CelulaCristalina celulaCristalina;
 	
 	

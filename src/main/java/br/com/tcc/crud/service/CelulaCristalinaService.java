@@ -20,11 +20,6 @@ public class CelulaCristalinaService implements Serializable{
 	
 	@Transacional
 	public void salvar(CelulaCristalina celulaCristalina) {
-		if (celulaCristalina.isInclusao()) {
-		}
-		
-		if (celulaCristalina.isEdicao()) {
-		}
 		
 		celulaCristalinaDAO.salvar(celulaCristalina);
 	}

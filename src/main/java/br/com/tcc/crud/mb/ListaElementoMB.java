@@ -26,12 +26,18 @@ public class ListaElementoMB implements Serializable{
 	
 	private List<Elemento> elementosSelecionados = new ArrayList<>();
 	
+	private String teste1;
 	
 	@PostConstruct
 	public void inicializar() {
 		System.out.println("Init lista elemento MB");
 		elementos = elementoService.listAll();
 		System.out.println("Inicializou!!");
+		teste1 = "Grasi";
+	}
+	
+	public void testa(String teste) {
+		System.out.println("Teste: " + teste);
 	}
 	
 	public void excluirSelecionados() {
@@ -72,6 +78,15 @@ public class ListaElementoMB implements Serializable{
 	public void setElementosSelecionados(List<Elemento> elementosSelecionados) {
 		this.elementosSelecionados = elementosSelecionados;
 	}
+
+	public String getTeste1() {
+		return teste1;
+	}
+
+	public void setTeste1(String teste1) {
+		this.teste1 = teste1;
+	}
 	
 
+	
 }

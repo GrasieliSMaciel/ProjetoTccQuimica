@@ -65,25 +65,15 @@
 	
 	
 	
-	                        <p:column selectionMode="multiple" width="5%" styleClass="align-center" headerText="jhjh"/>
-	                        
-	                        <p:column headerText="Simbolo"
-	                        	      filterBy="#{elemento.simbolo}"
-	                        		  sortBy="#{elemento.simbolo}" filterMatchMode="contains">
-	                        	<h:link value="#{elemento.simbolo}" outcome="cadastro-elementos.xhtml">
-	                        		<f:param name="id" value="#{elemento.id}"/>	                        	
-	                        	</h:link>	                        	
-	                        </p:column>		                        
+	                        <p:column selectionMode="multiple" width="5%" styleClass="align-center"/>
 	                        
 	                        <p:column headerText="Nome"
 	                        		  filterBy="#{elemento.nome}"
 	                        		  sortBy="#{elemento.nome}" filterMatchMode="contains">
-	                        	<h:link value="#{elemento.nome}" outcome="cadastro-elementos.xhtml">
+	                        	<h:link value="#{elemento.nome}" outcome="cadastro-substancias.xhtml">
 	                        		<f:param name="id" value="#{elemento.id}"/>	                        	
 	                        	</h:link>	                        
 	                        </p:column>	 
-	                        
- 
 	                        
 	                        <p:column headerText="Nome Latim"
 	                        	      filterBy="#{elemento.nomeLatim}"
@@ -91,28 +81,14 @@
 	                        	<h:outputLabel value="#{elemento.nomeLatim}" />
 	                        </p:column>
 	                        
-
-	                        <p:column headerText="CAS"
-	                        	      filterBy="#{elemento.cas}"
-	                        		  sortBy="#{elemento.cas}" filterMatchMode="contains">
-	                        	<h:outputLabel value="#{elemento.cas}" />
-	                        </p:column>		                        
-
-	                        <p:column headerText="Origem nome"
-	                        	      filterBy="#{elemento.origemNome}"
-	                        		  sortBy="#{elemento.origemNome}" filterMatchMode="contains">
-	                        	<h:outputLabel value="#{elemento.origemNome}" />
-	                        </p:column>	
+	                        <p:column headerText="Simbolo"
+	                        	      filterBy="#{elemento.simbolo}"
+	                        		  sortBy="#{elemento.simbolo}" filterMatchMode="contains">
+	                        	<h:outputLabel value="#{elemento.simbolo}" />
+	                        </p:column>	                                               
 	                        
-	                        <p:column headerText="Camadas Eletrônicas"
-	                        	      filterBy="#{elemento.camadasEletronicas}"
-	                        		  sortBy="#{elemento.camadasEletronicas}" filterMatchMode="contains">
-	                        	<h:outputLabel value="#{elemento.camadasEletronicas}" />
-	                        </p:column>	
 	                        	
 	                    </p:dataTable>
-	                    
-	                    
 					</div>
 	            </div>
         	</h:form>

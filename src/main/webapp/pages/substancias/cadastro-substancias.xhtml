@@ -5,18 +5,13 @@
                 template="/WEB-INF/templates/template.xhtml">
 
     <ui:define name="title">
-        Cadastro Elemento
+        Cadastro Tarefa
     </ui:define>
 
     <ui:define name="body">
         <f:metadata>
         	<f:viewParam name="id" value="#{cadastroElementoMB.idElemento}" converter="javax.faces.Long"/>
         	<f:viewParam name="id" value="#{cadastroElementoMB.idDescoberta}" converter="javax.faces.Long"/>
-        	<f:viewParam name="id" value="#{cadastroElementoMB.idPropriedadesAtomicas}" converter="javax.faces.Long"/>
-        	<f:viewParam name="id" value="#{cadastroElementoMB.idPropriedadesEletromagneticas}" converter="javax.faces.Long"/>
-        	<f:viewParam name="id" value="#{cadastroElementoMB.idPropriedadesFisicas}" converter="javax.faces.Long"/>
-        	<f:viewParam name="id" value="#{cadastroElementoMB.idPropriedadesDiversas}" converter="javax.faces.Long"/>
-        	<f:viewParam name="id" value="#{cadastroElementoMB.idCelulaCristalina}" converter="javax.faces.Long"/>
         	<f:event listener="#{cadastroElementoMB.inicializar()}" type="preRenderView"></f:event>
         </f:metadata>
 
@@ -66,55 +61,25 @@
                     <div class="ui-fluid">
                     	<p:panelGrid id="capaPanel" columns="4" layout="grid">
                     	
-                    		<p:outputLabel value="Simbolo" for="simbolo"/>
-                    		<p:inputText maxlength="2" placeholder="1º letra maiuscula" id="simbolo" value="#{cadastroElementoMB.elemento.simbolo}"/>
-
                     		<p:outputLabel value="Nome" for="nomeElemento"/>
                     		<p:inputText id="nomeElemento" value="#{cadastroElementoMB.elemento.nome}"/>
 
                     		<p:outputLabel value="Nome Latim" for="nomeElementoLatim"/>
                     		<p:inputText id="nomeElementoLatim" value="#{cadastroElementoMB.elemento.nomeLatim}"/>
                     		
+                    		<p:outputLabel value="Simbolo" for="simbolo"/>
+                    		<p:inputText id="simbolo" value="#{cadastroElementoMB.elemento.simbolo}"/>
+                    		
                      		<p:outputLabel value="Origem do Nome" for="nomeOrigem"/>
                     		<p:inputText id="nomeOrigem" value="#{cadastroElementoMB.elemento.origemNome}"/>                   		                    		
                     		
-                     		<p:outputLabel value="CAS" for="cas"/>
-                    		<p:inputText id="cas" value="#{cadastroElementoMB.elemento.cas}"/>
-                    		
-                     		<p:outputLabel value="Camadas Eletrônicas" for="camadas"/>
-                    		<p:inputText id="camadas" value="#{cadastroElementoMB.elemento.camadasEletronicas}"/> 
-
                      		<p:outputLabel value="Descobridor" for="descobridor"/>
-                    		<p:inputText id="descobridor" value="#{cadastroElementoMB.descoberta.descobridor}"/>                    		
-
-
+                    		<p:inputText id="descobridor" value="#{cadastroElementoMB.descoberta.descobridor}"/> 
+                    		
+                     		<p:outputLabel value="Descrição" for="descricao"/>
+                    		<p:inputText id="descricao" value="#{cadastroElementoMB.descoberta.descricao}"/>                    		
+                    		
                     	</p:panelGrid>
-
-                     		<p:outputLabel value="Descrição descoberta" for="descricao"/>
-                    		<p:inputTextarea id="descricao" value="#{cadastroElementoMB.descoberta.descricao}"/>                    		
-                    		
-
-                    		<p:outputLabel value="Materias para ler" for="links"/>
-                    		<p:inputTextarea id="links" value="#{cadastroElementoMB.elemento.links}"/>
-                    		
-                    		
-                    		<p:outputLabel value="Propriedades Atômicas" for="propAtoDesc"/>
-                    		<p:inputText id="propAtoDesc" value="#{cadastroElementoMB.propriedadesAtomicas.descricao}"/>
-                    		
-                     		<p:outputLabel value="Propriedades Fisicas" for="fisica"/>
-                    		<p:inputText id="fisica" value="#{cadastroElementoMB.propriedadesFisicas.quadra}"/>                   		                    		
-                    		
-                     		<p:outputLabel value="Diversas" for="diversas"/>
-                    		<p:inputText id="diversas" value="#{cadastroElementoMB.propriedadesDiversas.numeroAtomico}"/>
-                    		
-                     		<p:outputLabel value="Eletrônicas" for="eletro"/>
-                    		<p:inputText id="eletro" value="#{cadastroElementoMB.propriedadesEletromagneticas.tipoEletrico}"/> 
-                    		
-                    		
-              
-
-
-
                     
                     </div>
                 </div>

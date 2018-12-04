@@ -20,7 +20,7 @@ public class PropriedadesAtomicas implements Serializable{
 	@Column(length = 255)
 	private String propriedades;
 	
-	@Column(length = 255)
+	@Column(length = 400)
 	private String descricao;
 	
 	@Column(length = 100)

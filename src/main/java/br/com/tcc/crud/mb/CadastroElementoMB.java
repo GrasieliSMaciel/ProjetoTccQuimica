@@ -2,9 +2,14 @@ package br.com.tcc.crud.mb;
 
 import java.io.Serializable;
 
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+
+import org.primefaces.event.CloseEvent;
+import org.primefaces.event.ToggleEvent;
 
 import br.com.tcc.crud.model.CelulaCristalina;
 import br.com.tcc.crud.model.Descoberta;
@@ -65,26 +70,26 @@ public class CadastroElementoMB implements Serializable{
 		if (idElemento != null) {
 			elemento = elementoService.porId(idElemento);
 			
-//			if(idPropriedadesFisicas != null) {
-//				propriedadesFisicas = propriedadesFisicasService.porId(idPropriedadesFisicas);
-//			}
-//			
-//			if(idPropriedadesAtomicas != null) {
-//				propriedadesAtomicas = propriedadesAtomicasService.porId(idPropriedadesAtomicas);
-//			}
-//			
-//			if(idPropriedadesDiversas != null) {
-//				propriedadesDiversas = propriedadesDiversasService.porId(idPropriedadesDiversas);
-//			}
-//			
-//			if(idPropriedadesEletromagneticas != null) {
-//				propriedadesEletromagneticas = propriedadesEletromagneticasService.porId(idPropriedadesEletromagneticas);
-//			}
-//			
-//			if(idCelulaCristalina != null) {
-//				celulaCristalina = celulaCristalinaService.porId(idCelulaCristalina);
-//			}
-//			
+			if(idPropriedadesFisicas != null) {
+				propriedadesFisicas = propriedadesFisicasService.porId(idPropriedadesFisicas);
+			}
+			
+			if(idPropriedadesAtomicas != null) {
+				propriedadesAtomicas = propriedadesAtomicasService.porId(idPropriedadesAtomicas);
+			}
+			
+			if(idPropriedadesDiversas != null) {
+				propriedadesDiversas = propriedadesDiversasService.porId(idPropriedadesDiversas);
+			}
+			
+			if(idPropriedadesEletromagneticas != null) {
+				propriedadesEletromagneticas = propriedadesEletromagneticasService.porId(idPropriedadesEletromagneticas);
+			}
+			
+			if(idCelulaCristalina != null) {
+				celulaCristalina = celulaCristalinaService.porId(idCelulaCristalina);
+			}
+			
 			if(idDescoberta != null) {
 				descoberta = descobertaService.porId(idDescoberta);
 			}
@@ -102,7 +107,18 @@ public class CadastroElementoMB implements Serializable{
 		
 //		descobertaService.salvar(descoberta);	
 		
+		
+		celulaCristalina.setParametrosGradeC("teste grade C");
+		celulaCristalina.setParametrosGradeA("teste grade a");
+		celulaCristalina.setEstruturaGrade("estrutura grade");
+//		celulaCristalinaService.salvar(celulaCristalina);
+		
 		elemento.setDescoberta(descoberta);
+		elemento.setPropriedadesAtomicas(propriedadesAtomicas);
+		elemento.setPropriedadesEletromagneticas(propriedadesEletromagneticas);
+		elemento.setCelulaCristalina(celulaCristalina);
+		elemento.setPropriedadesFisicas(propriedadesFisicas);
+		elemento.setPropriedadesDiversas(propriedadesDiversas);
 		
 		System.out.println("Elemento: " + elemento);
 		elementoService.salvar(elemento);
@@ -119,7 +135,15 @@ public class CadastroElementoMB implements Serializable{
 		return "lista-elementos.xhtml?faces-redirect=true";
 	}
 
-	
+    public void onClose(CloseEvent event) {
+        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Panel Closed", "Closed panel id:'" + event.getComponent().getId() + "'");
+        FacesContext.getCurrentInstance().addMessage(null, message);
+    }
+
+    public void onToggle(ToggleEvent event) {
+        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, event.getComponent().getId() + " toggled", "Status:" + event.getVisibility().name());
+        FacesContext.getCurrentInstance().addMessage(null, message);
+    }
 
 	public Elemento getElemento() {
 		System.out.println("entrou em get elemento...");

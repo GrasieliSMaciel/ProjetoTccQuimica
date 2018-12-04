@@ -4,6 +4,7 @@ package br.com.tcc.crud.model;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -24,7 +25,9 @@ public class Descoberta  implements Serializable{
 	@Temporal(TemporalType.DATE)
 	private Date data;
 	
+	@Column(length = 500)
 	private String descobridor;
+	
 	
 	private String descricao;
 
