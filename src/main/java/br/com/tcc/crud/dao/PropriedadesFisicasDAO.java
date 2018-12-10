@@ -27,7 +27,7 @@ public class PropriedadesFisicasDAO implements Serializable{
 			manager.flush();
 			
 		} catch (Exception e) {			
-			throw new NegocioException("Esta propriedade nï¿½o fï¿½sica nï¿½o pode ser excluï¿½da");
+			throw new NegocioException("Esta propriedade física não pode ser excluido!");
 		}
 	}
 

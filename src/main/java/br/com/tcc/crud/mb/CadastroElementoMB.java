@@ -108,7 +108,6 @@ public class CadastroElementoMB implements Serializable{
 		
 		celulaCristalina.setParametrosGradeC("teste grade C");
 		celulaCristalina.setParametrosGradeA("teste grade a");
-		celulaCristalina.setEstruturaGrade("estrutura grade");
 //		celulaCristalinaService.salvar(celulaCristalina);
 		
 		elemento.setDescoberta(descoberta);

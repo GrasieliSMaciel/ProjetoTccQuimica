@@ -35,6 +35,11 @@ public class ElementoDAO implements Serializable{
 		return manager.find(Elemento.class, id);
 	}
 	
+	public int porSimbolo(String simbolo) {
+		System.out.println("simbolo na camada DAO: " + simbolo);
+		return manager.createNativeQuery("SELECT simbolo FROM Elemento WHERE simbolo like" + simbolo, Elemento.class).getFirstResult();
+	}
+	
 	public List<Elemento> listAll() {
 		return manager.createNativeQuery("SELECT * FROM Elemento", Elemento.class).getResultList();
 	}

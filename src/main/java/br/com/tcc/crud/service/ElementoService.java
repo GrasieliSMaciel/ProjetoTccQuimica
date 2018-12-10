@@ -43,5 +43,10 @@ public class ElementoService implements Serializable{
 	public Elemento porId(Long id) {
 		return elementoDAO.porId(id);
 	}
+	
+	public int porSimbolo(String simbolo) {
+		System.out.println("Simbolo em serviço: " + simbolo);
+		return elementoDAO.porSimbolo(simbolo);
+	}
 
 }

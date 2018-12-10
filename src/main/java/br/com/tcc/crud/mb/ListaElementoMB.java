@@ -26,6 +26,12 @@ public class ListaElementoMB implements Serializable{
 	
 	private List<Elemento> elementosSelecionados = new ArrayList<>();
 	
+	private Elemento elemento = new Elemento();
+	
+	private Long idResultElemento;
+	
+	private int idElemento;
+	
 	private String teste1;
 	
 	@PostConstruct
@@ -36,8 +42,25 @@ public class ListaElementoMB implements Serializable{
 		teste1 = "Grasi";
 	}
 	
-	public void testa(String teste) {
-		System.out.println("Teste: " + teste);
+	public String busca(String simbolo) {
+		
+		System.out.println("Simbolo: " + simbolo);
+		
+		idElemento = elementoService.porSimbolo(simbolo);
+
+		idResultElemento = (long) idElemento;
+		
+		System.out.println(elemento == null ? "Vazio!":"Passou das busca");
+		
+		if(elemento == null) {
+			
+			return "lista-elementos?faces-redirect=true";
+			
+		}else {
+			elemento = elementoService.porId(idResultElemento);
+		
+			return "elemento.xhtml?faces-redirect=true";
+		}
 	}
 	
 	public void excluirSelecionados() {
@@ -86,7 +109,30 @@ public class ListaElementoMB implements Serializable{
 	public void setTeste1(String teste1) {
 		this.teste1 = teste1;
 	}
-	
+
+	public Elemento getElemento() {
+		return elemento;
+	}
+
+	public void setElemento(Elemento elemento) {
+		this.elemento = elemento;
+	}
+
+	public int getIdElemento() {
+		return idElemento;
+	}
+
+	public void setIdElemento(int idElemento) {
+		this.idElemento = idElemento;
+	}
+
+	public Long getIdResultElemento() {
+		return idResultElemento;
+	}
+
+	public void setIdResultElemento(Long idResultElemento) {
+		this.idResultElemento = idResultElemento;
+	}
 
 	
 }

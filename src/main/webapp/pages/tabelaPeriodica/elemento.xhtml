@@ -1,0 +1,69 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:adm="http://github.com/adminfaces"
+	template="/WEB-INF/templates/template.xhtml">
+
+	<ui:define name="head-end">
+		<style type="text/css">
+.ui-grid-row .ui-grid-col-2, .ui-grid-row .ui-grid-col-10 {
+	padding: 0.5em 0;
+	margin-left: 10px;
+}
+
+.ui-orderlist .ui-orderlist-list {
+	height: auto;
+}
+
+.ui-orderlist .ui-grid-row .ui-grid-col-2, .ui-orderlist .ui-grid-row .ui-grid-col-10
+	{
+	padding: 0;
+}
+
+.ui-g div {
+	background-color: #ededed;
+	text-align: center;
+	border: 1px solid #fafafa;
+	width: 60px;
+	height: 60px;
+}
+
+.ui-g button {
+	text-align: center;
+	width: 60px;
+	height: 60px;
+	align: center;
+	background-color: clearblue
+}
+</style>
+
+
+	</ui:define>
+
+	<ui:define name="title">
+        Elemento
+    </ui:define>
+
+
+
+	<ui:define name="body">
+		<adm:breadcrumb title="Pesquisa Default" />
+
+		<h:form>
+
+			<h3 style="margin-top: 0">Teste</h3>
+
+			<p:outputPanel deferred="true">
+
+				<p>#{listaElementoMB.elemento.descoberta}</p>
+
+			</p:outputPanel>
+
+		</h:form>
+
+
+	</ui:define>
+
+</ui:composition>
