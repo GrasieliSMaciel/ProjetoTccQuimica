@@ -24,6 +24,9 @@
         <h:form id="form" prependId="false">
             <p:focus/>
 
+    <p:tabView>
+    
+        <p:tab title="Godfather Part I">
 			
             <div class="box box-primary">
                 <div class="box-header with-border">
@@ -97,28 +100,61 @@
                     		<p:outputLabel value="Materias para ler" for="links"/>
                     		<p:inputTextarea id="links" value="#{cadastroElementoMB.elemento.links}"/>
                     		
-                    		
-                    		<p:outputLabel value="Propriedades Atômicas" for="propAtoDesc"/>
-                    		<p:inputText id="propAtoDesc" value="#{cadastroElementoMB.propriedadesAtomicas.descricao}"/>
-                    		
-                     		<p:outputLabel value="Propriedades Fisicas" for="fisica"/>
-                    		<p:inputText id="fisica" value="#{cadastroElementoMB.propriedadesFisicas.quadra}"/>                   		                    		
-                    		
-                     		<p:outputLabel value="Diversas" for="diversas"/>
-                    		<p:inputText id="diversas" value="#{cadastroElementoMB.propriedadesDiversas.numeroAtomico}"/>
-                    		
-                     		<p:outputLabel value="Eletrônicas" for="eletro"/>
-                    		<p:inputText id="eletro" value="#{cadastroElementoMB.propriedadesEletromagneticas.tipoEletrico}"/> 
-                    		
-                    		
-              
-
-
-
                     
                     </div>
                 </div>
             </div>
+            </p:tab>
+            
+         
+                 <p:tab title="Propriedades Atômicas">
+                    <div class="ui-fluid">
+                    	<p:panelGrid id="panelPropAtomicas" columns="4" layout="grid">
+                    		<p:outputLabel value="Propriedades Atômicas" for="propAtoDesc"/>
+                    		<p:inputText id="propAtoDesc" value="#{cadastroElementoMB.propriedadesAtomicas.descricao}"/>                    	
+                    	</p:panelGrid>
+                    </div>                 
+                 </p:tab>  
+            
+                 <p:tab title="Propriedades Físicas">
+                    <div class="ui-fluid">
+                    	<p:panelGrid id="panelPropFisicas" columns="4" layout="grid">
+                     		<p:outputLabel value="Propriedades Fisicas" for="fisica"/>
+                    		<p:inputText id="fisica" value="#{cadastroElementoMB.propriedadesFisicas.quadra}"/>                      	
+                    	</p:panelGrid>
+                    </div>                  
+                 </p:tab>  
+                 
+                  <p:tab title="Propriedades Eletromagnéticas">
+                    <div class="ui-fluid">
+                    	<p:panelGrid id="panelPropEletro" columns="4" layout="grid">
+                     		<p:outputLabel value="Eletrônicas" for="eletro"/>
+                    		<p:inputText id="eletro" value="#{cadastroElementoMB.propriedadesEletromagneticas.tipoEletrico}"/>                     	
+                    	</p:panelGrid>
+                    </div>                    
+                 </p:tab>                 
+
+                  <p:tab title="Célula Cristalina">
+                    <div class="ui-fluid">
+                    	<p:panelGrid id="panelCelulaCristalina" columns="4" layout="grid">
+                     		<p:outputLabel value="Eletrônicas" for="estruturaGrade"/>
+                    		<p:inputText id="estruturaGrade" value="#{cadastroElementoMB.celulaCristalina.estruturaGrade}"/>                     	
+                    	</p:panelGrid>
+                    </div>                    
+                 </p:tab>  
+                 
+                  <p:tab title="Propriedades Diversas">
+                    <div class="ui-fluid">
+                    	<p:panelGrid id="panelPropDiversas" columns="4" layout="grid">
+                     		<p:outputLabel value="Diversas" for="diversas"/>
+                    		<p:inputText id="diversas" value="#{cadastroElementoMB.propriedadesDiversas.numeroAtomico}"/>                    	
+                    	</p:panelGrid>
+                    </div>                    
+                 </p:tab>                   
+            
+            </p:tabView>
+            
+            
         </h:form>
 
     </ui:define>
