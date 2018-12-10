@@ -38,7 +38,6 @@ public class TarefaService implements Serializable{
 	
 	
 	public List<Tarefa> listAll() {
-		System.out.println("List all taref service");
 		return tarefaDAO.listAll();
 	}
 	

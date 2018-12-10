@@ -27,7 +27,7 @@ public class CelulaCristalinaDAO implements Serializable{
 			manager.flush();
 			
 		} catch (Exception e) {			
-			throw new NegocioException("CelulaCristalina não pode ser excluida");
+			throw new NegocioException("CelulaCristalina nï¿½o pode ser excluida");
 		}
 	}
 

@@ -80,7 +80,6 @@ public class CelulaCristalina  implements Serializable{
 		this.temperaturaDebye = temperaturaDebye;
 	}
 
-
 	
 
 //	@ManyToOne

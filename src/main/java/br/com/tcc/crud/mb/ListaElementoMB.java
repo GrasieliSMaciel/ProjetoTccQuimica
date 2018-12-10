@@ -49,7 +49,7 @@ public class ListaElementoMB implements Serializable{
 			elementos.remove(elemento);
 		}
 		
-		FacesUtil.addInfoMessage("Elemento(s) excluídos com sucesso!");
+		FacesUtil.addInfoMessage("Elemento(s) excluï¿½dos com sucesso!");
 	}
 	
 	

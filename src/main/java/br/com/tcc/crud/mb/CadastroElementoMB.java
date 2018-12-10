@@ -2,14 +2,9 @@ package br.com.tcc.crud.mb;
 
 import java.io.Serializable;
 
-import javax.faces.application.FacesMessage;
-import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-
-import org.primefaces.event.CloseEvent;
-import org.primefaces.event.ToggleEvent;
 
 import br.com.tcc.crud.model.CelulaCristalina;
 import br.com.tcc.crud.model.Descoberta;
@@ -25,6 +20,9 @@ import br.com.tcc.crud.service.PropriedadesAtomicasService;
 import br.com.tcc.crud.service.PropriedadesDiversasService;
 import br.com.tcc.crud.service.PropriedadesEletromagneticasService;
 import br.com.tcc.crud.service.PropriedadesFisicasService;
+
+
+
 
 @Named
 @ViewScoped
@@ -103,7 +101,7 @@ public class CadastroElementoMB implements Serializable{
 		
 		System.out.println("Descoberta descobrifor: " + descoberta.getDescobridor());
 		
-//		descoberta.setDescricao("descrição forçada");
+//		descoberta.setDescricao("descriï¿½ï¿½o forï¿½ada");
 		
 //		descobertaService.salvar(descoberta);	
 		
@@ -135,15 +133,6 @@ public class CadastroElementoMB implements Serializable{
 		return "lista-elementos.xhtml?faces-redirect=true";
 	}
 
-    public void onClose(CloseEvent event) {
-        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Panel Closed", "Closed panel id:'" + event.getComponent().getId() + "'");
-        FacesContext.getCurrentInstance().addMessage(null, message);
-    }
-
-    public void onToggle(ToggleEvent event) {
-        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, event.getComponent().getId() + " toggled", "Status:" + event.getVisibility().name());
-        FacesContext.getCurrentInstance().addMessage(null, message);
-    }
 
 	public Elemento getElemento() {
 		System.out.println("entrou em get elemento...");

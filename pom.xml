@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.com.tcc</groupId>
-	<artifactId>crud-adminfaces</artifactId>
+	<artifactId>ProjetoTccQuimica</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 
@@ -104,21 +104,17 @@
 			<scope>compile</scope>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
 		<dependency>
 			<groupId>javax.annotation</groupId>
 			<artifactId>javax.annotation-api</artifactId>
 			<version>1.3.1</version>
 		</dependency>
 
-		<dependency>
-		<groupId>javax.annotation</groupId>
-			<artifactId>javax.annotation-api</artifactId>
-			<version>1.3.1</version>
-			</dependency>
-		</dependencies>
+	</dependencies>
 
 	<build>
-		<finalName>crud-adminfaces</finalName>
+		<finalName>ProjetoTccQuimica</finalName>
 	</build>
 
 	<properties>

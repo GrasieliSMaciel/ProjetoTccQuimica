@@ -24,7 +24,6 @@ public class CadastroTarefaMB implements Serializable{
 	
 	
 	public void inicializar() {
-		System.out.println("Cadastro tarefa init");
 		if (idTarefa != null) {
 			tarefa = tarefaService.porId(idTarefa);
 		}

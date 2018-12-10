@@ -29,7 +29,7 @@ public class PropriedadesAtomicasDAO implements Serializable {
 			manager.flush();
 			
 		} catch (Exception e) {			
-			throw new NegocioException("Esta propriedade atomica não pode ser excluida");
+			throw new NegocioException("Esta propriedade atomica nï¿½o pode ser excluida");
 		}
 	}
 
