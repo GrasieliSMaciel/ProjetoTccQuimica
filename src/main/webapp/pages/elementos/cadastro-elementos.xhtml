@@ -67,7 +67,7 @@
     
     
     
-        <p:tab title="Godfather Part I">
+        <p:tab title="Elemento">
 			
 
 
@@ -116,7 +116,11 @@
                     <div class="ui-fluid">
                     	<p:panelGrid id="panelPropAtomicas" columns="4" layout="grid">
                     		<p:outputLabel value="Propriedades Atômicas" for="propAtoDesc"/>
-                    		<p:inputText id="propAtoDesc" value="#{cadastroElementoMB.propriedadesAtomicas.descricao}"/>                    	
+                    		<p:inputText id="propAtoDesc" value="#{cadastroElementoMB.propriedadesAtomicas.descricao}"/> 
+                    		
+                      		<p:outputLabel value="Peso Atômico" for="atomico"/>
+                    		<p:inputText id="atomico" value="#{cadastroElementoMB.propriedadesFisicas.pesoAtomico}"/>
+                    		                   		                   	
                     	</p:panelGrid>
                     </div>                 
                  </p:tab>  
@@ -124,8 +128,13 @@
                  <p:tab title="Propriedades Físicas">
                     <div class="ui-fluid">
                     	<p:panelGrid id="panelPropFisicas" columns="4" layout="grid">
-                     		<p:outputLabel value="Propriedades Fisicas" for="fisica"/>
-                    		<p:inputText id="fisica" value="#{cadastroElementoMB.propriedadesFisicas.quadra}"/>                      	
+                    	
+                     		<p:outputLabel value="Quadra" for="quadra"/>
+                    		<p:inputText id="quadra" value="#{cadastroElementoMB.propriedadesFisicas.quadra}"/> 
+ 
+                      		<p:outputLabel value="Fase" for="fase"/>
+                    		<p:inputText id="fase" value="#{cadastroElementoMB.propriedadesFisicas.fase}"/> 
+                    		                     	
                     	</p:panelGrid>
                     </div>                  
                  </p:tab>  
@@ -134,7 +143,10 @@
                     <div class="ui-fluid">
                     	<p:panelGrid id="panelPropEletro" columns="4" layout="grid">
                      		<p:outputLabel value="Eletrônicas" for="eletro"/>
-                    		<p:inputText id="eletro" value="#{cadastroElementoMB.propriedadesEletromagneticas.tipoEletrico}"/>                     	
+                    		<p:inputText id="eletro" value="#{cadastroElementoMB.propriedadesEletromagneticas.tipoEletrico}"/> 
+                    		
+                     		<p:outputLabel value="Condutividade Termica" for="condutividadeTermica"/>
+                    		<p:inputText id="condutividadeTermica" value="#{cadastroElementoMB.propriedadesEletromagneticas.condutividadeTermica}"/>                     		                    	
                     	</p:panelGrid>
                     </div>                    
                  </p:tab>                 
@@ -142,8 +154,13 @@
                   <p:tab title="Célula Cristalina">
                     <div class="ui-fluid">
                     	<p:panelGrid id="panelCelulaCristalina" columns="4" layout="grid">
+                    	
                      		<p:outputLabel value="Eletrônicas" for="estruturaGrade"/>
-                    		<p:inputText id="estruturaGrade" value="#{cadastroElementoMB.celulaCristalina.estruturaGrade}"/>                     	
+                    		<p:inputText id="estruturaGrade" value="#{cadastroElementoMB.celulaCristalina.estruturaGrade}"/> 
+
+                     		<p:outputLabel value="Atitude C A" for="atitudeCA"/>
+                    		<p:inputText id="atitudeCA" value="#{cadastroElementoMB.celulaCristalina.atitudeCA}"/> 
+                    		                    	
                     	</p:panelGrid>
                     </div>                    
                  </p:tab>  
@@ -151,8 +168,13 @@
                   <p:tab title="Propriedades Diversas">
                     <div class="ui-fluid">
                     	<p:panelGrid id="panelPropDiversas" columns="4" layout="grid">
+                    	
                      		<p:outputLabel value="Diversas" for="diversas"/>
-                    		<p:inputText id="diversas" value="#{cadastroElementoMB.propriedadesDiversas.numeroAtomico}"/>                    	
+                    		<p:inputText id="diversas" value="#{cadastroElementoMB.propriedadesDiversas.numeroAtomico}"/>
+ 
+                     		<p:outputLabel value="Calor específico" for="calor"/>
+                    		<p:inputText id="calor" value="#{cadastroElementoMB.propriedadesDiversas.calorEspecifico}"/>
+                    		                    		                    	
                     	</p:panelGrid>
                     </div>                    
                  </p:tab>                   

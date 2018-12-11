@@ -22,13 +22,13 @@ public class PropriedadesFisicas implements Serializable{
 	
 	private String numeroAtomico;
 	
-	private BigDecimal pesoAtomico;
+	private float pesoAtomico;
 	
-	private BigDecimal densidade;
+	private float densidade;
 	
-	private BigDecimal pontoFusao;
+	private float pontoFusao;
 	
-	private BigDecimal pontoEbulicao;
+	private float pontoEbulicao;
 	
 	private String fase;
 	
@@ -63,35 +63,37 @@ public class PropriedadesFisicas implements Serializable{
 		this.numeroAtomico = numeroAtomico;
 	}
 
-	public BigDecimal getPesoAtomico() {
+
+
+	public float getPesoAtomico() {
 		return pesoAtomico;
 	}
 
-	public void setPesoAtomico(BigDecimal pesoAtomico) {
+	public void setPesoAtomico(float pesoAtomico) {
 		this.pesoAtomico = pesoAtomico;
 	}
 
-	public BigDecimal getDensidade() {
+	public float getDensidade() {
 		return densidade;
 	}
 
-	public void setDensidade(BigDecimal densidade) {
+	public void setDensidade(float densidade) {
 		this.densidade = densidade;
 	}
 
-	public BigDecimal getPontoFusao() {
+	public float getPontoFusao() {
 		return pontoFusao;
 	}
 
-	public void setPontoFusao(BigDecimal pontoFusao) {
+	public void setPontoFusao(float pontoFusao) {
 		this.pontoFusao = pontoFusao;
 	}
 
-	public BigDecimal getPontoEbulicao() {
+	public float getPontoEbulicao() {
 		return pontoEbulicao;
 	}
 
-	public void setPontoEbulicao(BigDecimal pontoEbulicao) {
+	public void setPontoEbulicao(float pontoEbulicao) {
 		this.pontoEbulicao = pontoEbulicao;
 	}
 

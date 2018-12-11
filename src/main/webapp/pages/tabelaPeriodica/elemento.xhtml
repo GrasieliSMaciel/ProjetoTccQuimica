@@ -53,11 +53,21 @@
 
 		<h:form>
 
-			<h3 style="margin-top: 0">Teste</h3>
 
 			<p:outputPanel deferred="true">
 
-				<p>#{listaElementoMB.elemento.descoberta}</p>
+				<p>#{listaElementoMB.elemento.simbolo}</p>
+				<p>#{listaElementoMB.elemento.descoberta.descobridor}</p>
+				<p>#{listaElementoMB.elemento.descoberta.data}</p>
+
+
+				<p:column headerText="Simbolo" filterBy="#{elemento.simbolo}"
+					sortBy="#{elemento.simbolo}" filterMatchMode="contains">
+					<h:link value="#{elemento.simbolo}"
+						outcome="cadastro-elementos.xhtml">
+						<f:param name="id" value="#{elemento.id}" />
+					</h:link>
+				</p:column>
 
 			</p:outputPanel>
 

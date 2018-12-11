@@ -54,7 +54,9 @@
 
 
 	<ui:define name="body">
+	
 		<adm:breadcrumb title="Pesquisa Default" />
+		
 
 		<h:form>
 
@@ -66,7 +68,8 @@
 
 			<div class="ui-g">
 				<div>
-					<p:commandButton value="H" action="#{listaElementoMB.busca('H')}" styleClass=".ui-g">
+					<p:commandButton value="H" action="#{listaElementoMB.busca(1)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
@@ -89,7 +92,8 @@
 				<div></div>
 
 				<div class="ui-g">
-					<p:commandButton value="He" action="#{listaElementoMB.busca('He')}" styleClass=".ui-g">
+					<p:commandButton value="He" action="#{listaElementoMB.busca(2)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
@@ -99,11 +103,13 @@
 
 			<div class="ui-g">
 				<div>
-					<p:commandButton value="Li" action="#{listaElementoMB.busca('Li')}" styleClass=".ui-g">
+					<p:commandButton value="Li" action="#{listaElementoMB.busca(3)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>				</div>
 				<div>
-					<p:commandButton value="Be" action="#{listaElementoMB.busca('Be')}" styleClass=".ui-g">
+					<p:commandButton value="Be" action="#{listaElementoMB.busca(4)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
@@ -119,37 +125,42 @@
 				<div></div>
 				<div></div>
 				<div>
-					<p:commandButton value="B" action="#{listaElementoMB.busca('B')}" styleClass=".ui-g">
+					<p:commandButton value="B" action="#{listaElementoMB.busca(5)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="C" action="#{listaElementoMB.busca('C')}" styleClass=".ui-g">
+					<p:commandButton value="C" action="#{listaElementoMB.busca(6)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="N" action="#{listaElementoMB.busca('N')}" styleClass=".ui-g">
+					<p:commandButton value="N" action="#{listaElementoMB.busca(7)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="O" action="#{listaElementoMB.busca('O')}" styleClass=".ui-g">
+					<p:commandButton value="O" action="#{listaElementoMB.busca(8)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="F" action="#{listaElementoMB.busca('F')}" styleClass=".ui-g">
+					<p:commandButton value="F" action="#{listaElementoMB.busca(9)}" styleClass=".ui-g">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Ne" action="#{listaElementoMB.busca('Ne')}" styleClass=".ui-g">
+					<p:commandButton value="Ne" action="#{listaElementoMB.busca(10)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
@@ -159,12 +170,14 @@
 
 			<div class="ui-g">
 				<div>
-					<p:commandButton value="Na" action="#{listaElementoMB.busca('Na')}" styleClass=".ui-g">
+					<p:commandButton value="Na" action="#{listaElementoMB.busca(11)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 				<div>
-					<p:commandButton value="Mg" action="#{listaElementoMB.busca('Mg')}" styleClass=".ui-g">
+					<p:commandButton value="Mg" action="#{listaElementoMB.busca(12)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
@@ -181,37 +194,43 @@
 				<div></div>
 
 				<div>
-					<p:commandButton value="Al" action="#{listaElementoMB.busca('Al')}" styleClass=".ui-g">
-						<f:param name="productId" value="10" />
-					</p:commandButton>
-				</div>
-
-				<div>
-					<p:commandButton value="Si" action="#{listaElementoMB.busca('Si')}" styleClass=".ui-g">
-						<f:param name="productId" value="10" />
-					</p:commandButton>
-				</div>
-
-				<div>
-					<p:commandButton value="P" action="#{listaElementoMB.busca('P')}" styleClass=".ui-g">
+					<p:commandButton value="Al" action="#{listaElementoMB.busca(13)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="S" action="#{listaElementoMB.busca('S')}" styleClass=".ui-g">
+					<p:commandButton value="Si" action="#{listaElementoMB.busca(14)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Cl" action="#{listaElementoMB.busca('Cl')}" styleClass=".ui-g">
+					<p:commandButton value="P" action="#{listaElementoMB.busca(15)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Ar" action="#{listaElementoMB.busca('Ar')}" styleClass=".ui-g">
+					<p:commandButton value="S" action="#{listaElementoMB.busca(16)}" styleClass=".ui-g"
+					process="@form" update="@form">
+						<f:param name="productId" value="10" />
+					</p:commandButton>
+				</div>
+
+				<div>
+					<p:commandButton value="Cl" action="#{listaElementoMB.busca(17)}" styleClass=".ui-g"
+					process="@form" update="@form">
+						<f:param name="productId" value="10" />
+					</p:commandButton>
+				</div>
+
+				<div>
+					<p:commandButton value="Ar" action="#{listaElementoMB.busca(18)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
@@ -222,109 +241,127 @@
 
 			<div class="ui-g">
 				<div>
-					<p:commandButton value="K" action="#{listaElementoMB.busca('K')}" styleClass=".ui-g">
+					<p:commandButton value="K" action="#{listaElementoMB.busca(19)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Ca" action="#{listaElementoMB.busca('Ca')}" styleClass=".ui-g">
+					<p:commandButton value="Ca" action="#{listaElementoMB.busca(20)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Sc" action="#{listaElementoMB.busca('Sc')}" styleClass=".ui-g">
+					<p:commandButton value="Sc" action="#{listaElementoMB.busca(21)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Ti" action="#{listaElementoMB.busca('Ti')}" styleClass=".ui-g">
+					<p:commandButton value="Ti" action="#{listaElementoMB.busca(22)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="V" action="#{listaElementoMB.busca('V')}" styleClass=".ui-g">
+					<p:commandButton value="V" action="#{listaElementoMB.busca(23)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Cr" action="#{listaElementoMB.busca('Cr')}" styleClass=".ui-g">
+					<p:commandButton value="Cr" action="#{listaElementoMB.busca(24)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Mn" action="#{listaElementoMB.busca('Mn')}" styleClass=".ui-g">
+					<p:commandButton value="Mn" action="#{listaElementoMB.busca(25)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Fe" action="#{listaElementoMB.busca('Fe')}" styleClass=".ui-g">
+					<p:commandButton value="Fe" action="#{listaElementoMB.busca(26)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Co" action="#{listaElementoMB.busca('Co')}" styleClass=".ui-g">
+					<p:commandButton value="Co" action="#{listaElementoMB.busca(27)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Ni" action="#{listaElementoMB.busca('Ni')}" styleClass=".ui-g">
+					<p:commandButton value="Ni" action="#{listaElementoMB.busca(28)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Cu" action="#{listaElementoMB.busca('teste')}" styleClass=".ui-g">
+					<p:commandButton value="Cu" action="#{listaElementoMB.busca(29)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Zn" action="#{listaElementoMB.busca('Cu')}" styleClass=".ui-g">
+					<p:commandButton value="Zn" action="#{listaElementoMB.busca(30)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Ga" action="#{listaElementoMB.busca('Ga')}" styleClass=".ui-g">
+					<p:commandButton value="Ga" action="#{listaElementoMB.busca(31)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Ge" action="#{listaElementoMB.busca('Ge')}" styleClass=".ui-g">
+					<p:commandButton value="Ge" action="#{listaElementoMB.busca(32)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="As" action="#{listaElementoMB.busca('As')}" styleClass=".ui-g">
+					<p:commandButton value="As" action="#{listaElementoMB.busca(33)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Se" action="#{listaElementoMB.busca('Se')}" styleClass=".ui-g">
+					<p:commandButton value="Se" action="#{listaElementoMB.busca(34)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Br" action="#{listaElementoMB.busca('Br')}" styleClass=".ui-g">
+					<p:commandButton value="Br" action="#{listaElementoMB.busca(35)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Kr" action="#{listaElementoMB.busca('Kr')}" styleClass=".ui-g">
+					<p:commandButton value="Kr" action="#{listaElementoMB.busca(36)}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
@@ -334,109 +371,127 @@
 
 			<div class="ui-g">
 				<div>
-					<p:commandButton value="Rb" styleClass=".ui-g">
+					<p:commandButton value="Rb" styleClass=".ui-g"
+					process="@form" update="@form">
 					
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Sr" action="#{listaElementoMB.busca('Sr')}" styleClass=".ui-g">
+					<p:commandButton value="Sr" action="#{listaElementoMB.busca('Sr')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Y" action="#{listaElementoMB.busca('Y')}" styleClass=".ui-g">
+					<p:commandButton value="Y" action="#{listaElementoMB.busca('Y')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Zr" action="#{listaElementoMB.busca('Zr')}" styleClass=".ui-g">
+					<p:commandButton value="Zr" action="#{listaElementoMB.busca('Zr')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Nb" action="#{listaElementoMB.busca('Nb')}" styleClass=".ui-g">
+					<p:commandButton value="Nb" action="#{listaElementoMB.busca('Nb')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Mo" action="#{listaElementoMB.busca('Mo')}" styleClass=".ui-g">
+					<p:commandButton value="Mo" action="#{listaElementoMB.busca('Mo')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Tc" action="#{listaElementoMB.busca('Tc')}" styleClass=".ui-g">
+					<p:commandButton value="Tc" action="#{listaElementoMB.busca('Tc')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Ru" action="#{listaElementoMB.busca('Ru')}" styleClass=".ui-g">
+					<p:commandButton value="Ru" action="#{listaElementoMB.busca('Ru')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Rh" action="#{listaElementoMB.busca('Rh')}" styleClass=".ui-g">
+					<p:commandButton value="Rh" action="#{listaElementoMB.busca('Rh')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Pd" action="#{listaElementoMB.busca('Pd')}" styleClass=".ui-g">
+					<p:commandButton value="Pd" action="#{listaElementoMB.busca('Pd')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Ag" action="#{listaElementoMB.busca('Ag')}" styleClass=".ui-g">
+					<p:commandButton value="Ag" action="#{listaElementoMB.busca('Ag')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Cd" action="#{listaElementoMB.busca('Cd')}" styleClass=".ui-g">
+					<p:commandButton value="Cd" action="#{listaElementoMB.busca('Cd')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="In" action="#{listaElementoMB.busca('In')}" styleClass=".ui-g">
+					<p:commandButton value="In" action="#{listaElementoMB.busca('In')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Sn" action="#{listaElementoMB.busca('Sn')}" styleClass=".ui-g">
+					<p:commandButton value="Sn" action="#{listaElementoMB.busca('Sn')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Sb" action="#{listaElementoMB.busca('Sb')}" styleClass=".ui-g">
+					<p:commandButton value="Sb" action="#{listaElementoMB.busca('Sb')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Te" action="#{listaElementoMB.busca('Te')}" styleClass=".ui-g">
+					<p:commandButton value="Te" action="#{listaElementoMB.busca('Te')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="I" action="#{listaElementoMB.busca('I')}" styleClass=".ui-g">
+					<p:commandButton value="I" action="#{listaElementoMB.busca('I')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Xe" action="#{listaElementoMB.busca('Xe')}" styleClass=".ui-g">
+					<p:commandButton value="Xe" action="#{listaElementoMB.busca('Xe')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
@@ -448,109 +503,127 @@
 
 			<div class="ui-g">
 				<div>
-					<p:commandButton value="Cs" action="#{listaElementoMB.busca('Cs')}" styleClass=".ui-g">
+					<p:commandButton value="Cs" action="#{listaElementoMB.busca('Cs')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Ba" action="#{listaElementoMB.busca('Ba')}" styleClass=".ui-g">
+					<p:commandButton value="Ba" action="#{listaElementoMB.busca('Ba')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="57-71" styleClass=".ui-g">
+					<p:commandButton value="57-71" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Hf" action="#{listaElementoMB.busca('Hf')}" styleClass=".ui-g">
+					<p:commandButton value="Hf" action="#{listaElementoMB.busca('Hf')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Ta" action="#{listaElementoMB.busca('Ta')}" styleClass=".ui-g">
+					<p:commandButton value="Ta" action="#{listaElementoMB.busca('Ta')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="W" action="#{listaElementoMB.busca('W')}" styleClass=".ui-g">
+					<p:commandButton value="W" action="#{listaElementoMB.busca('W')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Re" action="#{listaElementoMB.busca('Re')}" styleClass=".ui-g">
+					<p:commandButton value="Re" action="#{listaElementoMB.busca('Re')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Os" action="#{listaElementoMB.busca('Os')}" styleClass=".ui-g">
+					<p:commandButton value="Os" action="#{listaElementoMB.busca('Os')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Ir" action="#{listaElementoMB.busca('Ir')}" styleClass=".ui-g">
+					<p:commandButton value="Ir" action="#{listaElementoMB.busca('Ir')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Pt" action="#{listaElementoMB.busca('Pt')}" styleClass=".ui-g">
+					<p:commandButton value="Pt" action="#{listaElementoMB.busca('Pt')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Au" action="#{listaElementoMB.busca('Au')}" styleClass=".ui-g">
+					<p:commandButton value="Au" action="#{listaElementoMB.busca('Au')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Hg" action="#{listaElementoMB.busca('Hg')}" styleClass=".ui-g">
+					<p:commandButton value="Hg" action="#{listaElementoMB.busca('Hg')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Tl" action="#{listaElementoMB.busca('Tl')}" styleClass=".ui-g">
+					<p:commandButton value="Tl" action="#{listaElementoMB.busca('Tl')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Pb" action="#{listaElementoMB.busca('Pb')}" styleClass=".ui-g">
+					<p:commandButton value="Pb" action="#{listaElementoMB.busca('Pb')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Bi" action="#{listaElementoMB.busca('Bi')}" styleClass=".ui-g">
+					<p:commandButton value="Bi" action="#{listaElementoMB.busca('Bi')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Po" action="#{listaElementoMB.busca('Po')}" styleClass=".ui-g">
+					<p:commandButton value="Po" action="#{listaElementoMB.busca('Po')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="At" action="#{listaElementoMB.busca('At')}" styleClass=".ui-g">
+					<p:commandButton value="At" action="#{listaElementoMB.busca('At')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Rn" action="#{listaElementoMB.busca('Rn')}" styleClass=".ui-g">
+					<p:commandButton value="Rn" action="#{listaElementoMB.busca('Rn')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
@@ -563,109 +636,127 @@
 
 			<div class="ui-g">
 				<div>
-					<p:commandButton value="Fr" action="#{listaElementoMB.busca('Fr')}" styleClass=".ui-g">
+					<p:commandButton value="Fr" action="#{listaElementoMB.busca('Fr')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Ra" action="#{listaElementoMB.busca('Ra')}" styleClass=".ui-g">
+					<p:commandButton value="Ra" action="#{listaElementoMB.busca('Ra')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="89-103" styleClass=".ui-g">
+					<p:commandButton value="89-103" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Rf" action="#{listaElementoMB.busca('Rf')}" styleClass=".ui-g">
+					<p:commandButton value="Rf" action="#{listaElementoMB.busca('Rf')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Db" action="#{listaElementoMB.busca('Db')}" styleClass=".ui-g">
+					<p:commandButton value="Db" action="#{listaElementoMB.busca('Db')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Sg" action="#{listaElementoMB.busca('Sg')}" styleClass=".ui-g">
+					<p:commandButton value="Sg" action="#{listaElementoMB.busca('Sg')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Bh" action="#{listaElementoMB.busca('Bh')}" styleClass=".ui-g">
+					<p:commandButton value="Bh" action="#{listaElementoMB.busca('Bh')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Hs" action="#{listaElementoMB.busca('Hs')}" styleClass=".ui-g">
+					<p:commandButton value="Hs" action="#{listaElementoMB.busca('Hs')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Mt" action="#{listaElementoMB.busca('Mt')}" styleClass=".ui-g">
+					<p:commandButton value="Mt" action="#{listaElementoMB.busca('Mt')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Ds" action="#{listaElementoMB.busca('Ds')}" styleClass=".ui-g">
+					<p:commandButton value="Ds" action="#{listaElementoMB.busca('Ds')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Rg" action="#{listaElementoMB.busca('Rg')}" styleClass=".ui-g">
+					<p:commandButton value="Rg" action="#{listaElementoMB.busca('Rg')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Cn" action="#{listaElementoMB.busca('Cn')}" styleClass=".ui-g">
+					<p:commandButton value="Cn" action="#{listaElementoMB.busca('Cn')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Nh" action="#{listaElementoMB.busca('Nh')}" styleClass=".ui-g">
+					<p:commandButton value="Nh" action="#{listaElementoMB.busca('Nh')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Fl" action="#{listaElementoMB.busca('Fl')}" styleClass=".ui-g">
+					<p:commandButton value="Fl" action="#{listaElementoMB.busca('Fl')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Mc" action="#{listaElementoMB.busca('Mc')}" styleClass=".ui-g">
+					<p:commandButton value="Mc" action="#{listaElementoMB.busca('Mc')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Lv" action="#{listaElementoMB.busca('Lv')}" styleClass=".ui-g">
+					<p:commandButton value="Lv" action="#{listaElementoMB.busca('Lv')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Ts" action="#{listaElementoMB.busca('Ts')}" styleClass=".ui-g">
+					<p:commandButton value="Ts" action="#{listaElementoMB.busca('Ts')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Og" action="#{listaElementoMB.busca('Og')}" styleClass=".ui-g">
+					<p:commandButton value="Og" action="#{listaElementoMB.busca('Og')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
@@ -682,7 +773,8 @@
 			<div>
 
 				<div>
-					<p:commandButton value="Kr" action="#{listaElementoMB.busca('Kr')}" styleClass=".ui-g">
+					<p:commandButton value="Kr" action="#{listaElementoMB.busca('Kr')}" styleClass=".ui-g"
+					process="@form" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
@@ -691,91 +783,106 @@
 
 					<div class="ui-g">
 						<div>
-							<p:commandButton value="La" action="#{listaElementoMB.busca('La')}" styleClass=".ui-g">
+							<p:commandButton value="La" action="#{listaElementoMB.busca('La')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Ce" action="#{listaElementoMB.busca('Ce')}" styleClass=".ui-g">
+							<p:commandButton value="Ce" action="#{listaElementoMB.busca('Ce')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Pr" action="#{listaElementoMB.busca('Pr')}" styleClass=".ui-g">
+							<p:commandButton value="Pr" action="#{listaElementoMB.busca('Pr')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Nd" action="#{listaElementoMB.busca('Nd')}" styleClass=".ui-g">
+							<p:commandButton value="Nd" action="#{listaElementoMB.busca('Nd')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Pm" action="#{listaElementoMB.busca('Pm')}" styleClass=".ui-g">
+							<p:commandButton value="Pm" action="#{listaElementoMB.busca('Pm')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Sm" action="#{listaElementoMB.busca('Sm')}" styleClass=".ui-g">
+							<p:commandButton value="Sm" action="#{listaElementoMB.busca('Sm')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Eu" action="#{listaElementoMB.busca('Eu')}" styleClass=".ui-g">
+							<p:commandButton value="Eu" action="#{listaElementoMB.busca('Eu')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Gd" action="#{listaElementoMB.busca('Gd')}" styleClass=".ui-g">
+							<p:commandButton value="Gd" action="#{listaElementoMB.busca('Gd')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Tb" action="#{listaElementoMB.busca('Tb')}" styleClass=".ui-g">
+							<p:commandButton value="Tb" action="#{listaElementoMB.busca('Tb')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Dy" action="#{listaElementoMB.busca('Dy')}" styleClass=".ui-g">
+							<p:commandButton value="Dy" action="#{listaElementoMB.busca('Dy')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Ho" action="#{listaElementoMB.busca('teste')}" styleClass=".ui-g">
+							<p:commandButton value="Ho" action="#{listaElementoMB.busca('teste')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Er" action="#{listaElementoMB.busca('Er')}" styleClass=".ui-g">
+							<p:commandButton value="Er" action="#{listaElementoMB.busca('Er')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Tm" action="#{listaElementoMB.busca('Tm')}" styleClass=".ui-g">
+							<p:commandButton value="Tm" action="#{listaElementoMB.busca('Tm')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Yb" action="#{listaElementoMB.busca('Yb')}" styleClass=".ui-g">
+							<p:commandButton value="Yb" action="#{listaElementoMB.busca('Yb')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Lu" action="#{listaElementoMB.busca('Lu')}" styleClass=".ui-g">
+							<p:commandButton value="Lu" action="#{listaElementoMB.busca('Lu')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
@@ -787,92 +894,107 @@
 
 					<div class="ui-g">
 						<div>
-							<p:commandButton value="Ac" action="#{listaElementoMB.busca('Ac')}" styleClass=".ui-g">
+							<p:commandButton value="Ac" action="#{listaElementoMB.busca('Ac')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Th" action="#{listaElementoMB.busca('Th')}" styleClass=".ui-g">
+							<p:commandButton value="Th" action="#{listaElementoMB.busca('Th')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Pa" action="#{listaElementoMB.busca('Pa')}" styleClass=".ui-g">
+							<p:commandButton value="Pa" action="#{listaElementoMB.busca('Pa')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="U" action="#{listaElementoMB.busca('U')}" styleClass=".ui-g">
+							<p:commandButton value="U" action="#{listaElementoMB.busca('U')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 
 						<div>
-							<p:commandButton value="Np" action="#{listaElementoMB.busca('Np')}" styleClass=".ui-g">
+							<p:commandButton value="Np" action="#{listaElementoMB.busca('Np')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Pu" action="#{listaElementoMB.busca('Pu')}" styleClass=".ui-g">
+							<p:commandButton value="Pu" action="#{listaElementoMB.busca('Pu')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Am" action="#{listaElementoMB.busca('Am')}" styleClass=".ui-g">
+							<p:commandButton value="Am" action="#{listaElementoMB.busca('Am')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Cm" action="#{listaElementoMB.busca('Cm')}" styleClass=".ui-g">
+							<p:commandButton value="Cm" action="#{listaElementoMB.busca('Cm')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Bk" action="#{listaElementoMB.busca('Bk')}" styleClass=".ui-g">
+							<p:commandButton value="Bk" action="#{listaElementoMB.busca('Bk')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Cf" action="#{listaElementoMB.busca('Cf')}" styleClass=".ui-g">
+							<p:commandButton value="Cf" action="#{listaElementoMB.busca('Cf')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Es" action="#{listaElementoMB.busca('Es')}" styleClass=".ui-g">
+							<p:commandButton value="Es" action="#{listaElementoMB.busca('Es')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Fm" action="#{listaElementoMB.busca('Fm')}" styleClass=".ui-g">
+							<p:commandButton value="Fm" action="#{listaElementoMB.busca('Fm')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Md" action="#{listaElementoMB.busca('Md')}" styleClass=".ui-g">
+							<p:commandButton value="Md" action="#{listaElementoMB.busca('Md')}" styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="No" action="#{listaElementoMB.busca('No')}"  styleClass=".ui-g">
+							<p:commandButton value="No" action="#{listaElementoMB.busca('No')}"  styleClass=".ui-g"
+							process="@form" update="@form">
 								<f:param name="productId" value="10" />
 							</p:commandButton>
 						</div>
 
 						<div>
-							<p:commandButton value="Lr" action="#{listaElementoMB.busca('Lr')}" style="width:60px; height:60px; align:center; background-color:coral" >
+							<p:commandButton value="Lr" action="#{listaElementoMB.busca('Lr')}" style="width:60px; height:60px; align:center; background-color:coral" 
+							process="@form" update="@form">
 							
 							</p:commandButton>
 						</div>
@@ -884,7 +1006,31 @@
 			</div>
 
 
+			<p:panel>
+			
+				<div>						
+					<p:outputLabel value="#{listaElementoMB.elemento.nome}"/>
 
+				</div>				
+				
+	            <p:dataList id="listaElementosSelecionados" value="#{listaElementoMB.elemento}" var="elemento"
+	                        type="definition">
+	                        
+	                        ID: #{listaElementoMB.elemento.id} 
+	                        <br />
+	                        Nome: #{listaElementoMB.elemento.nome} 
+	                        <br />
+	                        Nome Latim: #{elemento.nomeLatim}
+	                        <br />
+	                        Simbolo: #{elemento.simbolo}
+
+	            </p:dataList>				
+				
+				
+				
+			</p:panel>
+			
+		
 
 		</h:form>
 

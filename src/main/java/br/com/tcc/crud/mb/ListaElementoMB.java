@@ -1,10 +1,13 @@
 package br.com.tcc.crud.mb;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -34,33 +37,80 @@ public class ListaElementoMB implements Serializable{
 	
 	private String teste1;
 	
+	private String nome;
+	
+	private Float unidade;
+	
+	private Float resultadoMolar;
+	
 	@PostConstruct
 	public void inicializar() {
 		System.out.println("Init lista elemento MB");
 		elementos = elementoService.listAll();
 		System.out.println("Inicializou!!");
 		teste1 = "Grasi";
+		
 	}
 	
-	public String busca(String simbolo) {
+	public void busca(Long id) {
 		
-		System.out.println("Simbolo: " + simbolo);
+		System.out.println("Id" + id);
 		
-		idElemento = elementoService.porSimbolo(simbolo);
+		elemento = elementoService.porId(id);
 
-		idResultElemento = (long) idElemento;
-		
-		System.out.println(elemento == null ? "Vazio!":"Passou das busca");
+		System.out.println(elemento == null ? "Vazio!" : "Passou das busca");
+
+		System.out.println(elemento == null ? "" :"Elemento: " + elemento);
 		
 		if(elemento == null) {
-			
-			return "lista-elementos?faces-redirect=true";
-			
-		}else {
-			elemento = elementoService.porId(idResultElemento);
-		
-			return "elemento.xhtml?faces-redirect=true";
+			mensagem("Elemento não cadastrado!");
 		}
+		
+	}
+	
+	public void calcula(Long id) {
+		
+		System.out.println("Id" + id);
+		
+		elemento = elementoService.porId(id);
+		
+		if(elemento == null) {
+			mensagem("Elemento não cadastrado!");
+		}else {
+			
+			float pesoAtomico;
+			pesoAtomico = elemento.getPropriedadesFisicas().getPesoAtomico();
+			resultadoMolar = pesoAtomico * unidade;
+			
+			unidade = (float) 1;
+		}
+		
+	}
+	
+    public void mensagem(String msg) {
+        FacesContext context = FacesContext.getCurrentInstance();
+         
+        context.addMessage(null, new FacesMessage("Atenção",  "" + msg) );
+    }
+	
+    public void info() {
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Info", "PrimeFaces Rocks."));
+    }
+     
+    public void warn() {
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "Warning!", "Watch out for PrimeFaces."));
+    }
+     
+    public void error() {
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Error!", "Contact admin."));
+    }
+     
+    public void fatal() {
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_FATAL, "Fatal!", "System Error"));
+    }
+	
+	public void calcular() {
+		
 	}
 	
 	public void excluirSelecionados() {
@@ -134,5 +184,30 @@ public class ListaElementoMB implements Serializable{
 		this.idResultElemento = idResultElemento;
 	}
 
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Float getUnidade() {
+		return unidade;
+	}
+
+	public void setUnidade(Float unidade) {
+		this.unidade = unidade;
+	}
+
+	public Float getResultadoMolar() {
+		return resultadoMolar;
+	}
+
+	public void setResultadoMolar(Float resultadoMolar) {
+		this.resultadoMolar = resultadoMolar;
+	}
+
+	
 	
 }
