@@ -49,37 +49,26 @@
 		<h:form>
 
 
-
-			<h3 style="margin-top: 0">Calculo</h3>
-			<br />
-
-
-
-			<p:panel>
+			<p:panelGrid columns="4" layout="grid">
 			
-			<div>
 				<p:inputNumber value="#{listaElementoMB.unidade}" />
-			</div>	
-				<p:spacer/>
-				<p:spacer/>
-				<p:spacer/>
 				
- 			<div>
                 <p:commandButton value="Calcular" update="@form"
                   action="#{listaElementoMB.calcular()}"
-                  icon="fa fa-check" styleClass="btn-primary"/>	 			
- 			</div>
+                  icon="fa fa-check" styleClass="btn-primary"/>	 		
                   
-                  
- 			<div>
-                <p:outputLabel  value="Resultado: #{listaElementoMB.resultadoMolar}" /> 			
- 			</div>                  
-                  			
-			</p:panel>
+                <p:outputLabel  value="Resultado: #{listaElementoMB.resultadoMolar}" /> 
+                
+                <p:commandButton update="@form"
+                  action="#{listaElementoMB.limpar()}"
+                  icon="fa fa-arrow-left" styleClass="btn-primary"/>	                
+                			
+            </p:panelGrid>  			
+			
 
 			<div class="ui-g">
 				<div>
-					<p:commandButton value="H" action="#{listaElementoMB.calcula(1)}" styleClass=".ui-g">
+					<p:commandButton value="H" action="#{listaElementoMB.calcula(1)}" styleClass=".ui-g" update="@form">
 					</p:commandButton>
 				</div>
 
@@ -101,7 +90,7 @@
 				<div></div>
 
 				<div class="ui-g">
-					<p:commandButton value="He" action="#{listaElementoMB.calcula(2)}" styleClass=".ui-g">
+					<p:commandButton value="He" action="#{listaElementoMB.calcula(2)}" styleClass=".ui-g" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
@@ -111,11 +100,11 @@
 
 			<div class="ui-g">
 				<div>
-					<p:commandButton value="Li" action="#{listaElementoMB.calcula(3)}" styleClass=".ui-g">
+					<p:commandButton value="Li" action="#{listaElementoMB.calcula(3)}" styleClass=".ui-g" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>				</div>
 				<div>
-					<p:commandButton value="Be" action="#{listaElementoMB.calcula(4)}" styleClass=".ui-g">
+					<p:commandButton value="Be" action="#{listaElementoMB.calcula(4)}" styleClass=".ui-g" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
@@ -131,37 +120,37 @@
 				<div></div>
 				<div></div>
 				<div>
-					<p:commandButton value="B" action="#{listaElementoMB.calcula(5)}" styleClass=".ui-g">
+					<p:commandButton value="B" action="#{listaElementoMB.calcula(5)}" styleClass=".ui-g" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="C" action="#{listaElementoMB.calcula(6)}" styleClass=".ui-g">
+					<p:commandButton value="C" action="#{listaElementoMB.calcula(6)}" styleClass=".ui-g" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="N" action="#{listaElementoMB.calcula(7)}" styleClass=".ui-g">
+					<p:commandButton value="N" action="#{listaElementoMB.calcula(7)}" styleClass=".ui-g" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="O" action="#{listaElementoMB.calcula(8)}" styleClass=".ui-g">
+					<p:commandButton value="O" action="#{listaElementoMB.calcula(8)}" styleClass=".ui-g" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="F" action="#{listaElementoMB.calcula(9)}" styleClass=".ui-g">
+					<p:commandButton value="F" action="#{listaElementoMB.calcula(9)}" styleClass=".ui-g" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>
 
 				<div>
-					<p:commandButton value="Ne" action="#{listaElementoMB.calcula(10)}" styleClass=".ui-g">
+					<p:commandButton value="Ne" action="#{listaElementoMB.calcula(10)}" styleClass=".ui-g" update="@form">
 						<f:param name="productId" value="10" />
 					</p:commandButton>
 				</div>

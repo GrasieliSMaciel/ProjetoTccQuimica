@@ -39,9 +39,13 @@ public class ListaElementoMB implements Serializable{
 	
 	private String nome;
 	
-	private Float unidade;
+	private Float unidade = (float) 1;
 	
 	private Float resultadoMolar;
+	
+	private Float resultadoMolarTotal = (float) 0;
+	
+	private List<Float> listaResultados = new ArrayList<>();
 	
 	@PostConstruct
 	public void inicializar() {
@@ -68,7 +72,27 @@ public class ListaElementoMB implements Serializable{
 		
 	}
 	
+	public void limpar() {
+		resultadoMolar = (float) 0;
+	}
+	
+	public void calcular() {
+		
+		for(int i = 0; i <listaResultados.size(); i++) {
+			
+			System.out.println("valor: " + listaResultados.get(i));
+			resultadoMolarTotal = resultadoMolarTotal + listaResultados.get(i);
+			
+			resultadoMolar = resultadoMolarTotal;
+		}
+		
+	}
+	
 	public void calcula(Long id) {
+		
+//		if(unidade == null) {
+//			mensagem("Digite a unidade do elemento!");
+//		}
 		
 		System.out.println("Id" + id);
 		
@@ -76,14 +100,25 @@ public class ListaElementoMB implements Serializable{
 		
 		if(elemento == null) {
 			mensagem("Elemento não cadastrado!");
-		}else {
+			return;
+		}
+//		else {
 			
-			float pesoAtomico;
-			pesoAtomico = elemento.getPropriedadesFisicas().getPesoAtomico();
-			resultadoMolar = pesoAtomico * unidade;
+			if(unidade == null) {
+				float pesoAtomico;
+				pesoAtomico = elemento.getPropriedadesFisicas().getPesoAtomico();
+				resultadoMolar = resultadoMolar + pesoAtomico * 1;
+				listaResultados.add(resultadoMolar);
+				
+			}else {
+				float pesoAtomico;
+				pesoAtomico = elemento.getPropriedadesFisicas().getPesoAtomico();
+				resultadoMolar = pesoAtomico * unidade;
+				listaResultados.add(resultadoMolar);
+			}
 			
 			unidade = (float) 1;
-		}
+//		}
 		
 	}
 	
@@ -108,10 +143,6 @@ public class ListaElementoMB implements Serializable{
     public void fatal() {
         FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_FATAL, "Fatal!", "System Error"));
     }
-	
-	public void calcular() {
-		
-	}
 	
 	public void excluirSelecionados() {
 		
@@ -206,6 +237,22 @@ public class ListaElementoMB implements Serializable{
 
 	public void setResultadoMolar(Float resultadoMolar) {
 		this.resultadoMolar = resultadoMolar;
+	}
+
+	public Float getResultadoMolarTotal() {
+		return resultadoMolarTotal;
+	}
+
+	public void setResultadoMolarTotal(Float resultadoMolarTotal) {
+		this.resultadoMolarTotal = resultadoMolarTotal;
+	}
+
+	public List<Float> getListaResultados() {
+		return listaResultados;
+	}
+
+	public void setListaResultados(List<Float> listaResultados) {
+		this.listaResultados = listaResultados;
 	}
 
 	
